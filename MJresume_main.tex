@@ -1,0 +1,87 @@
+\title{ Machine Learning  \\ THW 1 }
+\author{
+       Mark Jajeh
+       }
+\date{\today}
+
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath,mathtools}
+\usepackage{graphicx}
+\usepackage[margin=.25in]{geometry}
+\usepackage[outdir=./]{epstopdf}
+\usepackage[final]{pdfpages}
+\usepackage{multicol} % columns
+\usepackage{enumitem} % custom list enviroment
+\usepackage[compact]{titlesec} % Spacing after headers
+\topmargin = -1.1in
+
+\newcommand\textboxtwo[1]{%
+  \parbox{.5\textwidth}{#1}%
+}
+\newcommand{\lreven}[2]{
+	\textboxtwo{#1\hfill}\textboxtwo{\hfill #2}\\
+}
+
+
+\newcommand\textline[4][t]{%
+  \noindent\parbox[#1]{.333\textwidth}{\raggedright#2}%
+  \parbox[#1]{.333\textwidth}{\centering#3}%
+  \parbox[#1]{.333\textwidth}{\raggedleft{#4}}
+}
+
+%%%%% DOCUMENT START %%%%%%
+\begin{document}
+%%%% Name section
+{ \centering
+{\huge\textbf{Mark Jajeh}} \\
+mark.l.jajeh@gmail.com \\
+(650)-455-3016\\
+}
+%%% Education 
+\section*{\underline{Education}}
+\lreven{\textbf{Washington University in St. Louis}}{St.Louis, MO}
+\lreven{ M.S. Computer Engineering}{May 2016}
+\lreven{ B.S. Electrical Engineering}{ GPA: 3.15/4.00}
+\lreven{ B.S. Systems Engineering}{ }
+\lreven{\textbf{Saint Mary's College of California}}{Moraga, CA}
+\lreven{ B.S. Physics}{GPA: 3.47/4.00}
+
+
+\subsubsection*{\textbf{Advanced Coursework}}
+\textline[t]{Computational Physics}{Machine Learning}{Quantitative Image Processing}\\
+\textline[t]{Database Management Systems}{Digital Signal Processing}{Stochastic Process}\\
+\textline[t]{Cloud Computing with Big Data}{Multi-Agent Systems}{Geometric Computing}\\
+\textline[t]{Operations Research}{Rapid Prototype Development}{Principles of Electronic Devices}
+
+%%%% Experience
+\section*{\underline{Engineering Experience}}
+\subsubsection*{\textbf{Fleet}}
+Software Engineer (iOS)
+\begin{itemize}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+	\item Performance optimization
+	\item Data collection \& management 
+	\item Fast pace prototype design \& testing
+\end{itemize}
+\subsubsection*{\textbf{San Francisco Airport}}
+Electrical Engineer (Intern)
+\begin{itemize}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+	\item Waste Management Optimization project
+	\item AutoCAD design
+	\item Security \& Monitoring design and implementation
+\end{itemize}
+\subsubsection*{\textbf{Lickenbrock Technologies}}
+Signal Processing Engineer (Intern)
+\begin{itemize}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+	\item Algorithm design \& implementation
+	\item Multimodal image analysis
+	\item Software and Hardware development
+\end{itemize}
+\section*{\underline{Technical Skills}}
+%\subsubsection*{Programming Languages}
+\textbf{Languages:} MATLAB, Python, C++, Swift, SQL, Javascript, PHP, HTML, Mathematica \\
+\textbf{Software:}  Git, Labview, Simulink, AutoCAD, Latex\\
+\textbf{Other:} Linux, Hadoop, AWS, OpenCV, GLPK
+
+
+\end{document}
