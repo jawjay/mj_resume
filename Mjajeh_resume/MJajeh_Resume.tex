@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath,mathtools}
+\usepackage{graphicx}
+\usepackage[margin=.25in]{geometry}
+\usepackage[outdir=./]{epstopdf}
+\usepackage[final]{pdfpages}
+\usepackage{multicol} % columns
+\usepackage{enumitem} % custom list enviroment
+\usepackage[compact]{titlesec} % Spacing after headers
+\usepackage{hyperref}
+\usepackage{empheq} % used for multiline boxes
+
+%\usepackage[pscoord]{eso-pic}% The zero point of the coordinate systemis the lower left corner of the page (the default).
+
+\newcommand{\placetextboxb}[3]{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \setbox0=\hbox{#3}% Put <stuff> in a box
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(\LenToUnit{#1\paperwidth},\LenToUnit{#2\paperheight}){\vtop{{\null}\makebox[0pt][c]{#3}}}%
+  }%
+}%
+
+
+\topmargin = -1.2in
+
+\newcommand\textboxtwo[1]{%
+  \parbox{.5\textwidth}{#1}%
+}
+\newcommand{\lreven}[2]{
+	\textboxtwo{#1\hfill}\textboxtwo{\hfill #2}
+}
+
+
+\newcommand\textline[4][t]{%
+  \noindent\parbox[#1]{.333\textwidth}{\raggedright#2}%
+  \parbox[#1]{.333\textwidth}{\centering#3}%
+  \parbox[#1]{.333\textwidth}{\raggedleft{#4}}
+}
+
+
+\newcommand{\imageinline}[2]{\begingroup
+\setbox0=\hbox{\raisebox{-0.5\height}{\includegraphics[width=.#1,keepaspectratio]{#2}}}
+\parbox{\wd0}{\box0}\endgroup}
+
+
+
+\renewcommand\labelitemi{{\boldmath$\cdot$}}
+
+
+
+
+%%%%% DOCUMENT START %%%%%%
+\begin{document}
+%%%% Name section
+{ \centering
+{\huge\textbf{Mark Jajeh}} 
+
+\href{mailto:mark.l.jajeh@gmail.com}{mark.l.jajeh@gmail.com}\\
+(650)-455-3016\\
+\vspace{3mm}
+%%%% active links
+\href{https://www.linkedin.com/in/mark-jajeh-43462371}{\imageinline{5cm}{Pictures/LinkedIn_logo}}\hspace{5mm} \href{https://pocketsquare.io/markjajeh}{\imageinline{5cm}{Pictures/person_1.png}}\hspace{5mm} \href{https://github.com/jawjay}{\imageinline{5cm}{Pictures/github.png}} \\
+}
+
+
+%\href{mailto:my_address@wikibooks.org}{my\_address@wikibooks.org}
+%%%% Experience
+\section*{\underline{Technical Skills}}
+%\subsubsection*{Programming Languages}
+\textbf{Languages:} Python, C++, MATLAB, Swift, MySQL,Java\vspace{2mm} \\
+\textbf{Technologies:}  iOS, Git, NumPy, Pandas, Labview, AutoCAD, Latex \vspace{2mm} \\
+\textbf{Other:} Linux, Hadoop, PIG, Spark, AWS, GLPK, OpenCV
+
+\section*{\underline{Engineering Experience}}
+%\subsubsection*{\textbf{Fleet}}
+\lreven{\textbf{Fleet (startup)}}{San Francisco, CA}
+\\\lreven{\quad Software Engineer }{August 2015-August 2016}
+%\indent\hspace{0cm} iOS app for event coordination and social interactions.
+\begin{itemize}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+	\item Part of 3 person team responsible for entire iOS app implementation
+	\item Individual focus on 3rd party API integration(Facebook, Google, Yelp)
+	\item Recommendation system design and implementation in python
+\end{itemize} \vspace{2mm}
+%%%%% SFO
+\lreven{\textbf{San Francisco Airport}}{ Millbrae, CA }\\
+\lreven{\quad Electrical Engineer (Intern)}{Summer 2015}
+\begin{itemize}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+	\item   Waste Optimization Project: reorganized waste bin layout throughout  \\ \quad\hspace{20em} entire airport, estimated \$1 million project
+	\item AutoCAD design with a focus on electrical wiring layouts
+\end{itemize}\vspace{2mm}
+\lreven{\textbf{Lickenbrock Technologies}}{St.Louis, MO}\\
+\lreven{\quad Signal Processing Engineer (Intern)}{Spring 2015}
+\begin{itemize}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+	\item Multimodal imaging project: Designed and built autonomous imaging system\\ for unobtrusive  heat signature mapping of aircraft parts ( Matlab \& c++)
+	\item Software and Hardware development for imaging system
+\end{itemize}
+
+%%% Education 
+\section*{\underline{Education}}
+\lreven{\textbf{Washington University in St. Louis}}{St.Louis, MO}\\
+\lreven{ \quad M.S. Computer Engineering}{ August 2016}\\
+\lreven{ \quad B.S. Electrical Engineering}{ }\\
+\lreven{ \quad B.S. Systems Engineering}{ }\\
+\lreven{\textbf{Saint Mary's College of California}}{Moraga, CA}\\
+\lreven{\quad  B.S. Physics}{}
+%%% Technical Skills
+%% Advanced Coursework
+\subsubsection*{\textbf{Advanced Coursework}}
+\textline[t]{\quad Computational Physics}{Machine Learning}{Quantitative Image Processing}\\
+\textline[t]{\quad Database Management Systems}{Digital Signal Processing}{Stochastic Process}\\
+\textline[t]{\quad Cloud Computing with Big Data}{Multi-Agent Systems}{Geometric Computing}\\
+\textline[t]{\quad Operations Research}{Quantum Computing}{Principles of Electronic Devices}
+%email
+%% Projects
+\section*{\underline{Projects}}
+\begin{itemize}[topsep=0pt,itemsep=-.5ex,partopsep=1ex,parsep=1ex]
+	\item Automatic Guitar Tuner hardware and accompanying iOS App. (Swift,Objective-C)
+	\item Sports Scheduling algorithm design and analysis with integer programming. (MATLAB/Python)
+
+	\item K-mer Kernel counting for measuring Genetic Distance. (Python/C++)
+	\item NBA database and public API (MySQL,Python,Numpy,Pandas)
+\end{itemize}
+
+
+\end{document}
